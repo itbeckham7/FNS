@@ -1,4 +1,6 @@
-- 10월 2일 
+﻿- 10월 2일 
 	프로잭트 창조, Git 업로드, BetaLine 브랜치 창조
 	DevelopLine 창조
+
+	Create KSW Line.
 	
