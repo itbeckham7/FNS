@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "课程";
+    ViewBag.SubTitle = "课程模板";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("~/Areas/Manage/Views/Course/LeftMenu.cshtml")
+
+<div class="ck-content-body">
+
+    <div class="ck-paragraph">
+        <a class="ck-button" href="@Url.Action("Add", "CourseTemplate")">添加课程模板</a>
+    </div>
+    <div class="ck-paragraph">
+        <div class="ck-row">
+            <span class="ck-filter-label">领域</span>
+            <div class="ck-filters-container">
+                <span class="ck-filter">全部</span>
+                <span class="ck-filter active">医学</span>
+            </div>
+        </div>
+
+        <div class="ck-row">
+            <span class="ck-filter-label">方向</span>
+            <div class="ck-filters-container">
+                <span class="ck-filter">全部</span>
+                <span class="ck-filter active">执业药师</span>
+                <span class="ck-filter">执业医师</span>
+            </div>
+        </div>
+
+        <div class="ck-row">
+            <span class="ck-filter-label">学科</span>
+            <div class="ck-filters-container">
+                <span class="ck-filter">全部</span>
+                <span class="ck-filter active">临床执业医师</span>
+                <span class="ck-filter">临床助理医师</span>
+                <span class="ck-filter">中医执业医师</span>
+                <span class="ck-filter">中医助理医师</span>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

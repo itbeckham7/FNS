@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "系统";
+    ViewBag.SubTitle = "用户列表";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("~/Areas/Manage/Views/System/LeftMenu.cshtml")
+
+<div class="ck-content-body">
+
+    <div class="ck-paragraph">
+        <a class="ck-button" href="@Url.Action("Add", "ManageUser")">添加用户</a>
+        
+    </div>
+
+    <div class="ck-paragraph-noborder">
+        <div class="ck-row">
+            <div class="ck-input-label2" style="padding-left: 0;">角色</div>
+            <select>
+                <option selected>全部</option>
+            </select>
+            <div class="ck-input-label2">状态</div>
+            <select>
+                <option selected>全部</option>
+            </select>
+            <div class="ck-input-label2">&nbsp;</div>
+            <input style="width: 218px; margin-right: 16px;" placeholder="用户ID、用户名、姓名、邮箱" />
+
+            <a class="ck-button">查询</a>
+
+        </div>
+
+        <div class="ck-row">
+            <table class="ck-table" id="ck-usertable">
+                <tr class="ck-table-header">
+                    <td>用户ID</td>
+                    <td>用户名</td>
+                    <td>角色</td>
+                    <td>状态</td>
+                    <td>姓名</td>
+                    <td>邮箱</td>
+                    <td>身份说明</td>
+                    <td>最后登录时间</td>
+                    <td>创建时间</td>
+                    <td>操作</td>
+                </tr>
+
+                <tr>
+                    <td>123456</td>
+                    <td>zhangsan</td>
+                    <td>角色A</td>
+                    <td>在职</td>
+                    <td>张三</td>
+                    <td>zhangsan@1wangxiao.com</td>
+                    <td>身份说明身份说明身份说明身份说明</td>
+                    <td>2017-01-01 12:12:12</td>
+                    <td>2017-01-01 12:12:12</td>
+                    <td>
+                        <a class="ck-text-button">修改</a>
+                        <a class="ck-text-button">删除</a>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="ck-row pull-right">
+            <div class="ck-pager-container">
+                <div class="ck-pager-label" style="margin-right: 20px;">共xxx条记录</div>
+                <div class="ck-pager-first ck-pager-button">1</div>
+                <div class="ck-pager-prev ck-pager-button">首页</div>
+                <div class="ck-pager-num ck-pager-button">1</div>
+                <div class="ck-pager-num ck-pager-button selected">2</div>
+                <div class="ck-pager-num ck-pager-button">3</div>
+                <div class="ck-pager-num ck-pager-button">4</div>
+                <div class="ck-pager-next ck-pager-button">下一页</div>
+                <div class="ck-pager-last ck-pager-button">55</div>
+                <div class="ck-pager-shownum-label" style="margin-left: 20px">每页条数：</div>
+                <select style="width: 60px; padding-left: 6px;">
+                    <option>10</option>
+                    <option selected>30</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>200</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+   
+</script>
+
+

@@ -1,0 +1,445 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+* {
+    color: #333333;
+}
+
+
+.ck-topbar {
+    background-color: #00a0e9;
+    height: 60px;
+    padding: 10px;
+}
+
+.ck-topbar-header {
+    width: 400px;
+}
+
+img.ck-topbar-logo {
+    width: 100px;
+    height: 40px;
+    float: left;
+}
+
+.ck-topbar-title {
+    float: left;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+    height: 40px;
+}
+
+    .ck-topbar-title a {
+        color: white;
+        font-size: 14px;
+    }
+
+.ck-topbar-menu > li > a {
+    color: white;
+    font-size: 14px;
+}
+
+.ck-topbar-menu > li {
+    color: white;
+    font-size: 14px;
+    height: 40px;
+    margin: 10px 15px 0px 15px;
+    width: 60px;
+    float: left;
+    text-align: center;
+    list-style: none;
+}
+
+    .ck-topbar-menu > li.active,
+    .ck-topbar-menu > li:hover {
+        color: white;
+        font-size: 14px;
+        height: 40px;
+        border-bottom: 5px solid white;
+        cursor: pointer;
+    }
+
+        .ck-topbar-menu > li.active > a {
+            font-weight: 700;
+        }
+
+    .ck-topbar-menu > li > a {
+        text-decoration-line: none;
+        list-style: none;
+    }
+
+.ck-leftmenu {
+    overflow: auto;
+    width: 182px;
+    position: fixed;
+    left: 0px;
+    top: 60px;
+    border-right: 1px solid #d7d7d7;
+    box-shadow: #efefef 1px 0px initial;
+    height: 100%;
+}
+
+#leftmenu li {
+    height: auto;
+    width: 100%;
+}
+
+    #leftmenu li a {
+        padding: 16px;
+        color: #5d5d61;
+        background-color: white;
+        text-rendering: optimizeLegibility;
+        font-feature-settings: "kern" 1;
+        -webkit-font-feature-settings: "kern";
+        -moz-font-feature-settings: "kern";
+        -moz-font-feature-settings: "kern=1";
+        font-kerning: normal;
+    }
+
+    #leftmenu li i {
+        font-size: 20px;
+    }
+
+    #leftmenu li.active > a {
+        border-left-color: transparent;
+        color: rgb(40, 170, 229);
+        font-weight: normal;
+    }
+
+    #leftmenu li a:hover {
+        background-color: rgba(242, 242, 242, 1);
+        cursor: pointer;
+        border-radius: 0px;
+    }
+
+    #leftmenu li a span {
+        width: 25px;
+        height: 25px;
+        margin-right: 14px;
+        background-image: url("images/left-menu-item.png");
+        float: left;
+        display: inline-block;
+        background-size: cover;
+        position: relative;
+        top: -2px;
+    }
+
+    #leftmenu li.active a span {
+        background-image: url("images/left-menu-item-active.png");
+    }
+
+.ck-submenu i {
+    margin-left: 24px;
+}
+
+.ck-content-body {
+    padding-top: 10px;
+    padding-left: 204px;
+    padding-right: 20px;
+    height: 100%;
+}
+
+.ck-paragraph {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d7d7d7;
+    width: 100%;
+}
+
+.ck-paragraph-2 {
+    padding: 10px 0px 25px 0px;
+    margin: 10px 0px 20px 40px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.ck-paragraph-noborder {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.ck-button {
+    border-width: 0px;
+    background-color: rgba(40, 170, 229, 1);
+    border: none;
+    border-radius: 2px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 7px 15px 7px 15px;
+    display: inline-block;
+    cursor: pointer;
+    height: 34px;
+}
+
+    .ck-button:hover {
+        background-color: rgba(30, 140, 200, 1);
+        transition: 0.1s;
+        color: white;
+    }
+
+.ck-filter {
+    border-width: 0px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 2px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #333333;
+    padding: 7px 10px 7px 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    min-width: 50px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+    .ck-filter.active {
+        background-color: #28AAE5;
+        color: #FFFFFF;
+    }
+
+    .ck-filter:hover:not(.active) {
+        background-color: #d3f0e3;
+    }
+
+input {
+    height: 34px;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    padding: 0px 6px 0px 6px;
+}
+
+textarea {
+    width: 738px;
+    height: 121px;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    padding: 6px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 13px;
+}
+
+select {
+    width: 114px;
+    height: 34px;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+}
+
+.ck-text-button {
+    color: #28AAE5;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 4px 8px 4px 8px;
+}
+
+    .ck-text-button:hover {
+        color: #28AAE5;
+    }
+
+.ck-row {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    display: inline-block;
+}
+
+.ck-row-2 {
+    width: 100%;
+    padding: 4px 0px 4px 0px;
+    display: inline-block;
+}
+
+.ck-filter-label {
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-right: 30px;
+    float: left;
+    display: inline-block;
+    height: 32px;
+}
+
+.ck-filter-label-2 {
+    font-size: 14px;
+    padding-top: 8px;
+    padding-right: 30px;
+    padding-left: 30px;
+    float: left;
+    display: inline-block;
+    height: 32px;
+}
+
+.ck-filters-container {
+    display: inline-block;
+    float: left;
+}
+
+.ck-content-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.ck-input-label {
+    width: 140px;
+    margin: 0;
+    padding: 0 12px 0px 0px;
+    display: inline-block;
+    text-align: right;
+}
+
+.ck-input-container {
+    margin: 0;
+    padding: 0px;
+    display: inline-block;
+}
+
+    .ck-input-container input {
+        width: 738px;
+    }
+
+.ck-required-mark {
+    padding-left: 12px;
+    color: red;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.ck-input-alert {
+    width: 200px;
+    display: inline-block;
+}
+
+.ck-calendar-container {
+    width: 260px;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+
+    .ck-calendar-container input {
+        width: 226px;
+        float: left;
+        display: inline-block;
+    }
+
+    .ck-calendar-container > span {
+        width: 34px;
+        height: 34px;
+        float: left;
+        display: inline-block;
+        padding: 4px 4px 4px 4px;
+        font-size: 20px;
+    }
+
+.ck-input-label2 {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 20px;
+}
+
+.ck-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+    .ck-table .ck-table-header {
+        background-color: #f2f2f2;
+        font-size: 12px;
+        font-weight: 700;
+        color: #333333;
+    }
+
+    .ck-table tr {
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+    .ck-table td {
+        text-align: center;
+        padding: 8px 6px 8px 6px;
+    }
+
+.ck-pager-container {
+    width: 600px;
+    position: relative;
+    right: -560px;
+}
+
+    .ck-pager-container div {
+        text-align: center;
+        margin-left: 2px;
+        font-size: 12px;
+        display: inline-block;
+    }
+
+.ck-pager-shownum-label {
+    margin-left: 20px;
+}
+
+.ck-pager-button {
+    padding: 6px 12px 6px 12px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+    .ck-pager-button.selected {
+        background-color: #00a0e9;
+        color: white;
+    }
+
+.ck-bullet-img1 {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-image: url(images/left-menu-item.png);
+    float: left;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    top: -2px;
+}
+
+.ck-content-subtitle {
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1;
+    font-kerning: normal;
+    font-family: 微软雅黑;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+.ck-splitter {
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #d7d7d7;
+    display: block;
+}

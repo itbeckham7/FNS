@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "课程";
+    ViewBag.SubTitle = "课程模板";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("~/Areas/Manage/Views/Course/LeftMenu.cshtml")
+
+<div class="ck-content-body">
+
+    <div class="ck-paragraph">
+        <div class="ck-content-title">添加课程模板</div>
+    </div>
+    <div class="ck-paragraph">
+        <div class="ck-row">
+            <div class="ck-input-label">所属学科</div>
+            <div class="ck-input-container">
+                <select>
+                    <option selected value="">请选择</option>
+                    <option value="">学科1</option>
+                    <option value="">学科2</option>
+                </select>
+            </div>
+            <span class="ck-required-mark">*</span>
+            <div class="ck-input-label"></div>
+        </div>
+
+        <div class="ck-row">
+            <div class="ck-input-label">课程模板名称</div>
+            <div class="ck-input-container">
+                <input />
+            </div>
+            <span class="ck-required-mark">*</span>
+            <div class="ck-input-alert"></div>
+        </div>
+
+        <div class="ck-row">
+            <div class="ck-input-label">单科底价</div>
+            <div class="ck-input-container">
+                <input />
+            </div>
+            <span class="ck-required-mark">*</span>
+            <div class="ck-input-alert"></div>
+        </div>
+
+        <div class="ck-row">
+            <div class="ck-input-label">单科展示价格</div>
+            <div class="ck-input-container">
+                <input />
+            </div>
+            <span class="ck-required-mark">*</span>
+            <div class="ck-input-alert"></div>
+        </div>
+
+        <div class="ck-row">
+            <div class="ck-input-label">单科展示价格</div>
+            <div class="ck-input-container">
+                @*<div class="container">
+                    <div class="row">
+                        <div class='col-sm-6'>
+                            <div class="form-group">*@
+                <div class='input-group date ck-calendar-container' id='datetimepicker2'>
+                    <input type="text" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+                @*</div>
+                            </div>
+
+                        </div>
+                    </div>*@
+            </div>
+            <span class="ck-required-mark">*</span>
+            <div class="ck-input-alert"></div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewBag.Title = "系统";
+    ViewBag.SubTitle = "用户列表";
+    Layout = "~/Areas/Manage/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("~/Areas/Manage/Views/System/LeftMenu.cshtml")
+
+<div class="ck-content-body">
+
+    <style>
+        .ck-input-label{
+            width: 80px;
+        }
+
+        input[type="checkbox"]{
+            width: 13px;
+            height: 13px;
+            margin: 0px 4px 0px 0px;
+            position: relative;
+            top: 2px;
+        }
+
+        .ck-col-1{
+            width: 90px;
+        }
+
+        .ck-col-1, .ck-col-2{
+            padding: 0 !important;
+            text-align: left !important;
+        }
+    </style>
+
+    <div class="ck-paragraph">
+        <div class="ck-content-title">添加用户</div>
+    </div>
+
+    <div class="ck-paragraph-noborder">
+
+        @* --------- 基本信息 --------- *@
+        <div class="ck-row ck-content-subtitle">
+            <span class="ck-bullet-img1"></span>基本信息
+        </div>
+        <div class="ck-paragraph-2">
+            <div class="ck-row">
+                <div class="ck-input-label">用户名</div>
+                <div class="ck-input-container">
+                    <input placeholder="英文、数字、特殊符号"/>
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-alert"></div>
+            </div>
+
+            <div class="ck-row">
+                <div class="ck-input-label">角色</div>
+                <div class="ck-input-container">
+                    <select>
+                        <option selected value="">请选择</option>
+                        <option value="">学科1</option>
+                        <option value="">学科2</option>
+                    </select>
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-label"></div>
+            </div>
+
+            <div class="ck-row">
+                <div class="ck-input-label">状态</div>
+                <div class="ck-input-container">
+                    <select>
+                        <option selected value="">在职</option>
+                        <option value="">离职</option>
+                    </select>
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-label"></div>
+            </div>
+
+            <div class="ck-row">
+                <div class="ck-input-label">姓名</div>
+                <div class="ck-input-container">
+                    <input placeholder="中文名" />
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-alert"></div>
+            </div>
+
+            <div class="ck-row">
+                <div class="ck-input-label">邮箱</div>
+                <div class="ck-input-container">
+                    <input placeholder="公司邮箱" />
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-alert"></div>
+            </div>
+
+            <div class="ck-row">
+                <div class="ck-input-label">身份说明</div>
+                <div class="ck-input-container">
+                    <input />
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-alert"></div>
+            </div>
+
+            <div class="ck-row">
+                <div class="ck-input-label">密码</div>
+                <div class="ck-input-container">
+                    <input type="password" />
+                </div>
+                <span class="ck-required-mark">*</span>
+                <div class="ck-input-alert"></div>
+            </div>
+        </div>
+
+        @* --------- 权限配置 --------- *@
+        <div class="ck-row ck-content-subtitle">
+            <span class="ck-bullet-img1"></span>权限配置
+        </div>
+
+        <div class="ck-paragraph-2" style="border-bottom-style: none;">
+            <table class="ck-table">
+                <tr>
+                    <td class="ck-col-1">
+                        <span class="ck-filter-label-2">领域</span>
+                    </td>
+                    <td class="ck-col-2">
+                        <span class="ck-filter"><input type="checkbox" />全部</span>
+                        <span class="ck-filter active"><input type="checkbox" checked />执业药师</span>
+                        <span class="ck-filter"><input type="checkbox" />执业医师</span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="ck-row-2">
+                <span class="ck-filter-label-2">领域</span>
+                <div class="ck-filters-container">
+                    <span class="ck-filter">
+                        <input type="checkbox" />全部
+                    </span>
+                    <span class="ck-filter active"><input type="checkbox" checked />医学</span>
+                </div>
+            </div>
+
+            <div class="ck-row-2">
+                <span class="ck-filter-label-2">方向</span>
+                <div class="ck-filters-container">
+                    <span class="ck-filter"><input type="checkbox" />全部</span>
+                    <span class="ck-filter active"><input type="checkbox" checked />执业药师</span>
+                    <span class="ck-filter"><input type="checkbox" />执业医师</span>
+                </div>
+            </div>
+
+            <div class="ck-row-2">
+                <span class="ck-filter-label-2">学科</span>
+                <div class="ck-filters-container">
+                    <span class="ck-filter"><input type="checkbox" />全部</span>
+                    <span class="ck-filter active"><input type="checkbox" checked />临床执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />临床助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医助理医师</span>
+
+                </div>
+            </div>
+
+            <div class="ck-row-2">
+                <span class="ck-filter-label-2">科目</span>
+                <div class="ck-filters-container">
+                    <span class="ck-filter"><input type="checkbox" />全部</span>
+                    <span class="ck-filter active"><input type="checkbox" checked />临床执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />临床助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医助理医师</span>
+
+                    <span class="ck-filter"><input type="checkbox" />临床助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />临床助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />临床助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />临床助理医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医执业医师</span>
+                    <span class="ck-filter"><input type="checkbox" />中医助理医师</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ck-splitter"></div>
+
+        <div class="ck-row">
+            <a class="ck-button" style="margin: 10px 0 20px 130px;">提交</a>
+        </div>
+        
+    </div>
+
+</div>
+
+<script>
+
+</script>
+
+

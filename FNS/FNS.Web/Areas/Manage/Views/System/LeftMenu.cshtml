@@ -1,0 +1,81 @@
+﻿
+
+<div class="ck-leftmenu">
+    <ul class="nav nav-pills nav-stacked" id="leftmenu">
+        @{ 
+            var isActive1 = "";
+            var isActive11 = "";
+            var isActive2 = "";
+            var isActive21 = "";
+            var isActive3 = "";
+
+            var collapse1 = "collapsed";
+            var collapse11 = "collapse";
+            var collapse2 = "collapsed";
+            var collapse21 = "collapse";
+
+            if (ViewBag.SubTitle == "角色列表")
+            {
+                isActive1 = "active";
+                isActive11 = "active";
+                collapse1 = "";
+                collapse11 = "collapse in";
+            }
+            else if(ViewBag.SubTitle == "用户列表")
+            {
+                isActive2 = "active";
+                isActive21 = "active";
+                collapse2 = "";
+                collapse21 = "collapse in";
+            }
+            else if (ViewBag.SubTitle == "类目管理")
+            {
+                isActive3 = "active";
+                
+            }
+        }
+        <li class="@isActive1">
+            <a href="#"
+                data-toggle="collapse" data-target="#item1" data-parent="#leftmenu" class="@collapse1">
+                <span>&nbsp;</span>
+                角色管理
+                <i class="fa fa-angle-down pull-right pull-down"></i>
+
+            </a>
+            <ul id="item1" class="nav nav-pills nav-stacked left-submenu @collapse11">
+                <li class="ck-submenu @isActive11">
+                    <a>
+                        <i class="fa fa-angle-right pull-left"></i>
+                        角色列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="@isActive2">
+            <a data-toggle="collapse" href="#" data-target="#item2" data-parent="#leftmenu" class="@collapse2">
+                <span>&nbsp;</span>
+                用户管理
+                <i class="fa fa-angle-down pull-right pull-down"></i>
+
+            </a>
+            <ul id="item2" class="nav nav-stacked left-submenu @collapse21">
+                <li class="ck-submenu @isActive21">
+                    <a href="@Url.Action("Index", "ManageUser")">
+                        <i class="fa fa-angle-right pull-left"></i>
+                        用户列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="@isActive3">
+            <a>
+                <span>&nbsp;</span>
+                类目管理
+                @*<i class="fa fa-angle-down pull-right pull-down"></i>*@
+            </a>
+        </li>
+    </ul>
+</div>
+

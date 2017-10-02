@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - 第一网校</title>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/webix.css")
+    @Scripts.Render("~/Scripts/webix.js")
+    @Styles.Render("~/Content/bootstrap-datetimepicker.css")
+
+</head>
+<body>
+    <div class="navbar ck-topbar navbar-fixed-top">
+        <div class="navbar-header ck-topbar-header">
+            <img src="~/Content/images/site-logo.png" class="ck-topbar-logo" />
+            <div class="ck-topbar-title">
+                @Html.ActionLink("第一网校管理后台", "Index", "Manage/Course", new { area = "" }, null)
+            </div>
+        </div>
+        @*<div class="navbar-collapse collapse">*@
+        @{
+            var class1 = (ViewBag.Title == "课程") ? "active" : "";
+            var class2 = (ViewBag.Title == "学习") ? "active" : "";
+            var class3 = (ViewBag.Title == "系统") ? "active" : "";
+        }
+        <ul class="ck-topbar-menu">
+            <li class="@class1">@Html.ActionLink("课程", "Index", "Manage/Course", new { area = "" }, null)</li>
+            <li class="@class2">@Html.ActionLink("学习", "Index", "Manage/Study", new { area = "" }, null)</li>
+            <li class="@class3">@Html.ActionLink("系统", "Index", "Manage/System", new { area = "" }, null)</li>
+        </ul>
+        @*</div>*@
+    </div>
+
+    @*/////////////// show content ////////////*@
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/moment-with-locales.js")
+    @Scripts.Render("~/Scripts/bootstrap-datetimepicker.js")
+    @Scripts.Render("~/Scripts/ck-ui.js")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
